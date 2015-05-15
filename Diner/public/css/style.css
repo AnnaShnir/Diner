@@ -1,0 +1,65 @@
+#addDish {
+	background-color: whitesmoke;
+
+}
+
+body { 
+	padding: 40px; 
+}
+
+h1 {
+	text-align: center;
+}
+
+h3 {
+	padding-left: 15px;
+}
+
+#editButton {
+  background-color: whitesmoke;
+}
+
+#deleteButton {
+  background-color: darksalmon;
+}
+
+#updateButton {
+  background-color: lemonchiffon; 
+}
+
+.dish-name {
+	background-color: #5bc0de;
+	text-align: bottom;
+}
+
+.dish-price {
+	text-align: right;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.row .row {
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+[class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+
+
+

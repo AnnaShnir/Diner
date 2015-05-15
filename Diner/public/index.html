@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<link href="css/style.css" rel="stylesheet">
+<script src = "/models/models.js"></script>
+<script src = "/collections/collections.js"></script>
+<script src = "/views/views.js"></script>
+
+	<title>Walking Fed</title>
+    <h1>
+Walking Fed</h1>
+</head>
+<body>
+
+<div class="container-fluid" id="menu">
+
+<ul class="dishList" id="dishList">
+</ul>
+
+<!--
+    <div class="row dish">
+        <div class="col-md-4 dish-image row-eq-height" tag="dish-url">
+            <img src="http://blogs.independent.co.uk/wp-content/uploads/2013/07/IMG_0352.jpg" class="img-responsive" alt="Responsive image">
+        </div>
+        <div class="col-md-6 dish-name row-eq-height" style="dish-name">Lovely hearts</div>
+        <div class="col-md-2 dish-price row-eq-height">$16</div>
+    </div>
+-->
+</div>
+<div class="form" id="addDishForm" >
+        <div class="row">
+        <h3>Add New Dishes</h3>
+        </div>
+        <input type="text" id="newDishName" placeholder="dish name" required>
+        <input type="text" id="newDishPrice" placeholder="price" required>
+        <input type="text" id="newDishImage" placeholder="link to image">
+        <button type="button" id="addDish">Add Dish to menu</button>
+    </div>
+
+<script type="text/template" id="dishTemplate">
+
+       <span class = "dishPosition">
+        <div class="row dish">
+            <div class="col-md-4 dish-image row-eq-height" tag="dish-url">
+                <img src="<%= dish.image_url %>" class="img-responsive" alt="Responsive image">
+            </div>
+
+            <div class="col-md-6 dish-name row-eq-height" style="dish-name"><%= dish.name %>
+                <div class="col-md-2 dish-price row-eq-height"> $ <%= dish.price %></div>
+                <br/>
+
+                <button id="deleteButton" type="button">Delete Dish</button>
+                <button id="editButton" type="button">Edit Dish</button>
+
+                <span class="editDishForm" style = "display: none">
+                <div class="row">Type in the fields below</div>
+                <input type="text" id="editDishName<%=dish.id %>" placeholder="change dish name" required>
+                <input type="text" id="editDishPrice<%=dish.id %>" placeholder="change price" required>
+                <input type="text" id="editDishImage<%=dish.id %>" placeholder="change link to image">
+                <button id="updateButton">Update Dish</button>
+                </span>
+                    
+            </div>
+
+        </div>
+        </span>
+</script>
+
+
+</body>
+</html>
