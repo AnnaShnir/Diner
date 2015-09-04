@@ -27,6 +27,10 @@ h3 {
   background-color: lemonchiffon; 
 }
 
+.img-responsive {
+  width: 100%;
+}
+
 .dish-name {
 	background-color: #5bc0de;
 	text-align: bottom;
